@@ -51,13 +51,121 @@ void display()
 	glClear(GL_COLOR_BUFFER_BIT|GL_DEPTH_BUFFER_BIT);
 	glClearColor(0.552, 0.6, 0.682, 0);
 	
-	glColor3f(0,0,1);
-		glRasterPos3f(0,580,0);
+	glColor3f(0,0,0);
+		glRasterPos3f(5,580,0);
 		char msg1[] = "Start from the top, left to right, and diagonally from the left most to right";
 		for(int i=0; i<strlen(msg1); i++)
 		{
 			glutBitmapCharacter(GLUT_BITMAP_9_BY_15, msg1[i]);
 		}
+
+        //Draw the first word boxes
+        int a = 30;
+        int b = 550;
+        int c = 50;
+        int d = 530;
+        for (int i = 0; i < 5; i++) 
+        {
+            glColor3f(1, 1, 1);
+            glBegin(GL_POLYGON);
+            glVertex2i(a, b);
+            glVertex2i(c, b);
+            glVertex2i(c, d);
+            glVertex2i(a, d);
+            glEnd();
+
+             //lines of square
+            glColor3f(0, 0, 0);
+            glLineWidth(1);
+            glBegin(GL_LINES);
+            glVertex2i(a, b); 
+            glVertex2i(c, b); 
+            glVertex2i(c, b);
+            glVertex2i(c, d);
+            glVertex2i(c, d);                                               
+            glVertex2i(a, d);
+            glVertex2i(a, d); 
+            glVertex2i(a, b);
+            glEnd();
+
+            //increment x coordinates for the square
+            a = a+20;
+            c = c+20;
+        }  
+
+        //Draw the second word boxes
+        int e = 90;
+        int f = 530;
+        int g = 110;
+        int h = 510;
+        for (int i = 0; i < 6; i++) 
+        {
+            glColor3f(1, 1, 1);
+            glBegin(GL_POLYGON);
+            glVertex2i(e, f);
+            glVertex2i(g, f);
+            glVertex2i(g, h);
+            glVertex2i(e, h);
+            glEnd();
+
+             //lines of squere
+            glColor3f(0, 0, 0);
+            glLineWidth(1);
+            glBegin(GL_LINES);
+            glVertex2i(e, f); 
+            glVertex2i(g, f); 
+            glVertex2i(g, f);
+            glVertex2i(g, h);
+            glVertex2i(g, h);                                               
+            glVertex2i(e, h);
+            glVertex2i(e, h); 
+            glVertex2i(e, f);
+            glEnd();
+
+            e = e+20;
+            g = g+20;
+        }  
+        
+        //Draw the third horizontal word boxes
+        int i = 170;
+        int j = 530;
+        int k = 190;
+        int l = 510;
+        for (int arr = 0; arr < 6; arr++) 
+        {
+            glColor3f(1, 1, 1);
+            glBegin(GL_POLYGON);
+            glVertex2i(i, j);
+            glVertex2i(k, j);
+            glVertex2i(k, l);
+            glVertex2i(i, l);
+            glEnd();
+
+             //lines of squere
+            glColor3f(0, 0, 0);
+            glLineWidth(1);
+            glBegin(GL_LINES);
+            glVertex2i(i, j); 
+            glVertex2i(k, j); 
+            glVertex2i(k, j);
+            glVertex2i(k, l);
+            glVertex2i(k, l);                                               
+            glVertex2i(i, l);
+            glVertex2i(i, l); 
+            glVertex2i(i, j);
+            glEnd();
+
+            j = j-20;
+            l = l-20;
+        }  
+
+
+
+
+
+
+
+        
 		
 		glColor3f(0,0,1);
 		glRasterPos3f(650,20,0);
@@ -69,6 +177,125 @@ void display()
 	glutPostRedisplay();
 	glutSwapBuffers();
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 void exit()
 {
