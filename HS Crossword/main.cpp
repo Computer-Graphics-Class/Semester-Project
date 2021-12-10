@@ -10,6 +10,7 @@
 
 using namespace std;
 //Note: GLglut.h path depending on the system in use  
+//Linux compile: 
 
 void init()
 {
@@ -52,12 +53,53 @@ void display()
 	glClearColor(0.552, 0.6, 0.682, 0);
 	
 	glColor3f(0,0,0);
-		glRasterPos3f(5,580,0);
-		char msg1[] = "Start from the top, left to right, and diagonally from the left most to right";
-		for(int i=0; i<strlen(msg1); i++)
-		{
-			glutBitmapCharacter(GLUT_BITMAP_9_BY_15, msg1[i]);
-		}
+    glRasterPos3f(5,580,0);
+    char msg1[] = "Start from the top, left to right, and diagonally from the left most to right";
+    for(int i=0; i<strlen(msg1); i++)
+    {
+        glutBitmapCharacter(GLUT_BITMAP_9_BY_15, msg1[i]);
+    }
+
+    glColor3f(0,0,1);
+     glRasterPos3f(420,550,0);
+    char title[] = "Level 1 Questions to answer: (Science)";
+    for(int j=0; j<strlen(title); j++)
+    {
+        glutBitmapCharacter(GLUT_BITMAP_9_BY_15, title[j]);
+    }
+
+    glColor3f(0,0,0);
+    glRasterPos3f(420,520,0);
+    char question2[] = "1. What is the largest planet?";
+    for(int k=0; k<strlen(question2); k++)
+    {
+        glutBitmapCharacter(GLUT_BITMAP_9_BY_15, question2[k]);
+    }
+
+    glColor3f(0,0,0);
+    glRasterPos3f(420,500,0);
+    char question3[] = "2. How many colors does a rainbow have?";
+    for(int l=0; l<strlen(question3); l++)
+    {
+        glutBitmapCharacter(GLUT_BITMAP_9_BY_15, question3[l]);
+    }
+
+    glColor3f(0,0,0);
+    glRasterPos3f(420,480,0);
+    char question4[] = "3. Changing the direction of a wave results in?";
+    for(int m=0; m<strlen(question4); m++)
+    {
+        glutBitmapCharacter(GLUT_BITMAP_9_BY_15, question4[m]);
+    }
+
+    glColor3f(0,0,0);
+    glRasterPos3f(420,460,0);
+    char question5[] = "4. Which planet is the nearest to the sun?";
+    for(int n=0; n<strlen(question5); n++)
+    {
+        glutBitmapCharacter(GLUT_BITMAP_9_BY_15, question5[n]);
+    }
+
 
         //Draw the first word boxes
         int a = 30;
@@ -158,14 +200,6 @@ void display()
             j = j-20;
             l = l-20;
         }  
-
-
-
-
-
-
-
-        
 		
 		glColor3f(0,0,1);
 		glRasterPos3f(650,20,0);
@@ -177,125 +211,6 @@ void display()
 	glutPostRedisplay();
 	glutSwapBuffers();
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 void exit()
 {
