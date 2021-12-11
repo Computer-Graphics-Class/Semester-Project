@@ -1,12 +1,13 @@
 // for MS Windows
-//#include<Windows.h>   
-#include <GL/glut.h>      
+//#include<Windows.h>       
 #include <stdio.h>
 #include <stdlib.h>
+#include <glut.h>
 #include <math.h>
 #include <iostream>
 #include <string.h>
 #include <fstream>
+#include <gl/GL.h>
 
 using namespace std;
 //Note: GLglut.h path depending on the system in use  
