@@ -1,7 +1,7 @@
 // for MS Windows
 //#include<Windows.h>       
 #include <stdio.h>
-#include <stdlib.h>
+#include <stdlib.h> //make sure stdlib goes before glut
 #include <glut.h>
 #include <math.h>
 #include <iostream>
@@ -151,7 +151,7 @@ void display()
             glVertex2i(e, h);
             glEnd();
 
-             //lines of squere
+             //lines of square
             glColor3f(0, 0, 0);
             glLineWidth(1);
             glBegin(GL_LINES);
