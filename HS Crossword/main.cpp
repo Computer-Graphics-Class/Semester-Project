@@ -8,11 +8,17 @@
 #include <string.h>
 #include <fstream>
 #include <gl/GL.h>
+#include "earth.cpp"
+
 
 using namespace std;
 //Note: GLglut.h path depending on the system in use  
 //Linux compile: 
 
+
+void earth();
+void display();
+void keys();
 void init()
 {
     // Set display window color to as glClearColor(R,G,B,Alpha)
@@ -78,7 +84,7 @@ void display()
     }
 
     glColor3f(0,0,0);
-    glRasterPos3f(420,500,0);
+    glRasterPos3f(420,480,0);
     char question3[] = "2. How many colors does a rainbow have?";
     for(int l=0; l<strlen(question3); l++)
     {
@@ -86,7 +92,7 @@ void display()
     }
 
     glColor3f(0,0,0);
-    glRasterPos3f(420,480,0);
+    glRasterPos3f(420,460,0);
     char question4[] = "3. Changing the direction of a wave results in?";
     for(int m=0; m<strlen(question4); m++)
     {
@@ -94,7 +100,7 @@ void display()
     }
 
     glColor3f(0,0,0);
-    glRasterPos3f(420,460,0);
+    glRasterPos3f(420,440,0);
     char question5[] = "4. Which planet is the nearest to the sun?";
     for(int n=0; n<strlen(question5); n++)
     {
@@ -213,11 +219,6 @@ void display()
 	glutSwapBuffers();
 }
 
-void exit()
-{
-    glutHideWindow();
-}
-
 void keys(unsigned char key, int x, int y)
 {
     if(key == 'X')
@@ -227,10 +228,16 @@ void keys(unsigned char key, int x, int y)
 
 	if(key == 'Z')
     {
-        glutDisplayFunc(exit);
+        glutHideWindow();
+    }
+
+    if(key == 'e')
+    {
+            glutDisplayFunc(earth);
     }
     glutPostRedisplay();
 }
+
 
 int main(int argc, char** argv)
 {
