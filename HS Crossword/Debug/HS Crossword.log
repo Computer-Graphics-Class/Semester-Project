@@ -1,0 +1,11 @@
+﻿  main.cpp
+C:\Users\User\Desktop\OpenGLroot\Semester-Project\HS Crossword\main.cpp(35,16): warning C4018: '<': signed/unsigned mismatch
+C:\Users\User\Desktop\OpenGLroot\Semester-Project\HS Crossword\main.cpp(43,16): warning C4018: '<': signed/unsigned mismatch
+C:\Users\User\Desktop\OpenGLroot\Semester-Project\HS Crossword\main.cpp(59,19): warning C4018: '<': signed/unsigned mismatch
+C:\Users\User\Desktop\OpenGLroot\Semester-Project\HS Crossword\main.cpp(67,19): warning C4018: '<': signed/unsigned mismatch
+C:\Users\User\Desktop\OpenGLroot\Semester-Project\HS Crossword\main.cpp(75,19): warning C4018: '<': signed/unsigned mismatch
+C:\Users\User\Desktop\OpenGLroot\Semester-Project\HS Crossword\main.cpp(83,19): warning C4018: '<': signed/unsigned mismatch
+C:\Users\User\Desktop\OpenGLroot\Semester-Project\HS Crossword\main.cpp(91,19): warning C4018: '<': signed/unsigned mismatch
+C:\Users\User\Desktop\OpenGLroot\Semester-Project\HS Crossword\main.cpp(99,19): warning C4018: '<': signed/unsigned mismatch
+C:\Users\User\Desktop\OpenGLroot\Semester-Project\HS Crossword\main.cpp(208,17): warning C4018: '<': signed/unsigned mismatch
+  HS Crossword.vcxproj -> C:\Users\User\Desktop\OpenGLroot\Semester-Project\HS Crossword\Debug\HS Crossword.exe
