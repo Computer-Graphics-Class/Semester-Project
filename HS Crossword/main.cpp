@@ -77,7 +77,7 @@ void display()
 
     glColor3f(0,0,0);
     glRasterPos3f(420,520,0);
-    char question2[] = "1. What is the largest planet?";
+    char question2[] = "1. Which planet supports life?";
     for(int k=0; k<strlen(question2); k++)
     {
         glutBitmapCharacter(GLUT_BITMAP_9_BY_15, question2[k]);
