@@ -1,15 +1,13 @@
 // for MS Windows
-//#include<Windows.h>       
+//#include<Windows.h>   
+#include <GL/glut.h>      
 #include <stdio.h>
-#include <stdlib.h> //make sure stdlib goes before glut
-#include <glut.h>
+#include <stdlib.h>
 #include <math.h>
 #include <iostream>
 #include <string.h>
 #include <fstream>
-#include <gl/GL.h>
 #include "earth.cpp"
-
 
 using namespace std;
 //Note: GLglut.h path depending on the system in use  
@@ -68,7 +66,7 @@ void display()
     }
 
     glColor3f(0,0,1);
-     glRasterPos3f(420,550,0);
+     glRasterPos3f(410,550,0);
     char title[] = "Level 1 Questions to answer: (Science)";
     for(int j=0; j<strlen(title); j++)
     {
@@ -76,32 +74,41 @@ void display()
     }
 
     glColor3f(0,0,0);
-    glRasterPos3f(420,520,0);
-    char question2[] = "1. Which planet supports life?";
+    glRasterPos3f(410,520,0);
+    char question1[] = "1. Which planet supports life?";
+    for(int k=0; k<strlen(question1); k++)
+    {
+        glutBitmapCharacter(GLUT_BITMAP_9_BY_15, question1[k]);
+    }
+    
+    glColor3f(0,0,0);
+    glRasterPos3f(410,500,0);
+    char question2[] = "2. Which planet has a ring around it?";
     for(int k=0; k<strlen(question2); k++)
     {
         glutBitmapCharacter(GLUT_BITMAP_9_BY_15, question2[k]);
     }
 
     glColor3f(0,0,0);
-    glRasterPos3f(420,480,0);
-    char question3[] = "2. How many colors does a rainbow have?";
+    glRasterPos3f(410,480,0);
+    char question3[] = "3. How many colors does a rainbow have?";
+    //ans= reflux
     for(int l=0; l<strlen(question3); l++)
     {
         glutBitmapCharacter(GLUT_BITMAP_9_BY_15, question3[l]);
     }
 
     glColor3f(0,0,0);
-    glRasterPos3f(420,460,0);
-    char question4[] = "3. Changing the direction of a wave results in?";
+    glRasterPos3f(410,460,0);
+    char question4[] = "4. Changing the direction of a wave results in?";
     for(int m=0; m<strlen(question4); m++)
     {
         glutBitmapCharacter(GLUT_BITMAP_9_BY_15, question4[m]);
     }
 
     glColor3f(0,0,0);
-    glRasterPos3f(420,440,0);
-    char question5[] = "4. Which planet is the nearest to the sun?";
+    glRasterPos3f(410,440,0);
+    char question5[] = "5. Which planet is the nearest to the sun?";
     for(int n=0; n<strlen(question5); n++)
     {
         glutBitmapCharacter(GLUT_BITMAP_9_BY_15, question5[n]);
@@ -157,7 +164,7 @@ void display()
             glVertex2i(e, h);
             glEnd();
 
-             //lines of square
+             //lines of squere
             glColor3f(0, 0, 0);
             glLineWidth(1);
             glBegin(GL_LINES);
@@ -208,6 +215,105 @@ void display()
             l = l-20;
         }  
 		
+         //Draw the fourth word boxes
+        int m = 50;
+        int n = 450;
+        int o = 70;
+        int p = 430;
+        for (int i = 0; i < 8; i++) 
+        {
+            glColor3f(1, 1, 1);
+            glBegin(GL_POLYGON);
+            glVertex2i(m, n);
+            glVertex2i(o, n);
+            glVertex2i(o, p);
+            glVertex2i(m, p);
+            glEnd();
+
+             //lines of squere
+            glColor3f(0, 0, 0);
+            glLineWidth(1);
+            glBegin(GL_LINES);
+            glVertex2i(m, n); 
+            glVertex2i(o, n); 
+            glVertex2i(o, n);
+            glVertex2i(o, p);
+            glVertex2i(o, p);                                               
+            glVertex2i(m, p);
+            glVertex2i(m, p); 
+            glVertex2i(m, n);
+            glEnd();
+
+            m = m+20;
+            o = o+20;
+        }  
+
+        //Draw the fifth horizontal word boxes
+        int q = 110;
+        int r = 430;
+        int s = 130;
+        int t = 410;
+        for (int ar = 0; ar < 4; ar++) 
+        {
+            glColor3f(1, 1, 1);
+            glBegin(GL_POLYGON);
+            glVertex2i(q, r);
+            glVertex2i(s, r);
+            glVertex2i(s, l);
+            glVertex2i(q, l);
+            glEnd();
+
+             //lines of squere
+            glColor3f(0, 0, 0);
+            glLineWidth(1);
+            glBegin(GL_LINES);
+            glVertex2i(q, r); 
+            glVertex2i(s, r); 
+            glVertex2i(s, r);
+            glVertex2i(s, t);
+            glVertex2i(s, t);                                               
+            glVertex2i(q, t);
+            glVertex2i(q, t); 
+            glVertex2i(q, r);
+            glEnd();
+
+            r = r-20;
+            t = t-20;
+        }  
+
+         //Draw the sixth word boxes
+        int u = 50;
+        int v = 370;
+        int w = 70;
+        int x = 350;
+        for (int i = 0; i < 6; i++) 
+        {
+            glColor3f(1, 1, 1);
+            glBegin(GL_POLYGON);
+            glVertex2i(u, v);
+            glVertex2i(w, v);
+            glVertex2i(w, x);
+            glVertex2i(u, x);
+            glEnd();
+
+             //lines of squere
+            glColor3f(0, 0, 0);
+            glLineWidth(1);
+            glBegin(GL_LINES);
+            glVertex2i(u, v); 
+            glVertex2i(w, v); 
+            glVertex2i(w, v);
+            glVertex2i(w, x);
+            glVertex2i(w, x);                                               
+            glVertex2i(u, x);
+            glVertex2i(u, x); 
+            glVertex2i(u, v);
+            glEnd();
+
+            u = u+20;
+            w = w+20;
+        }  
+        
 		glColor3f(0,0,1);
 		glRasterPos3f(650,20,0);
 		char msg2[] = "Press Z to exit";
@@ -235,6 +341,11 @@ void keys(unsigned char key, int x, int y)
     {
             glutDisplayFunc(earth);
     }
+    
+    if(key == 's')
+    {
+            glutDisplayFunc(saturn);
+    }
     glutPostRedisplay();
 }
 
@@ -248,7 +359,7 @@ int main(int argc, char** argv)
     // Set top - left display window position.
     glutInitWindowPosition(50, 10);
     // Set display window width and height
-    glutInitWindowSize(900, 650);
+    glutInitWindowSize(1000, 650);
     // Create display window with the given title
     glutCreateWindow("HS Crosswords");
     // Execute initialization procedure
