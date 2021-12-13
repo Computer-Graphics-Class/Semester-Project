@@ -7,104 +7,115 @@
 #include <iostream>
 #include <string.h>
 #include <fstream>
-#include "saturn.cpp"
+
 
 using namespace std;
 //Note: GLglut.h path depending on the system in use  
 //Linux compile: 
 
-void addA();
-void addR();
-void addT();
-void addH();
-void earthkeys(unsigned char key, int x, int y)
+void saturnAddA();
+void saturnAddT();
+void saturnAddU();
+void saturnAddR();
+void saturnAddN();
+void saturnkeys(unsigned char key, int x, int y)
 {
     if(key == 'a')
     {
-        glutDisplayFunc(addA);
+        glutDisplayFunc(saturnAddA);
     }
-
-	if(key == 'r')
-    {
-         glutDisplayFunc(addR);
-    }
-
     if(key == 't')
     {
-            glutDisplayFunc(addT);
+            glutDisplayFunc(saturnAddT);
     }
-    if(key == 'h')
+    if(key == 'u')
     {
-            glutDisplayFunc(addH);
+            glutDisplayFunc(saturnAddU);
     }
-     if(key == 's')
+    if(key == 'r')
     {
-            glutDisplayFunc(saturn);
+         glutDisplayFunc(saturnAddR);
+    }
+    if(key == 'n')
+    {
+            glutDisplayFunc(saturnAddN);
     }
     glutPostRedisplay();
 }
 
-void earth()
+void saturn()
 {
 	//glClear(GL_COLOR_BUFFER_BIT|GL_DEPTH_BUFFER_BIT);
 	glClearColor(0.552, 0.6, 0.682, 0);
   
     //Display the text
     glColor3f(0,0,1);
-    glRasterPos3f(35,535,0);
-    glutBitmapCharacter(GLUT_BITMAP_9_BY_15, 'e');
+    glRasterPos3f(95,515,0);
+    glutBitmapCharacter(GLUT_BITMAP_9_BY_15, 's');
     glutPostRedisplay();
     glutSwapBuffers();
-    glutKeyboardFunc(earthkeys);
+    glutKeyboardFunc(saturnkeys);
 }
 
-void addA()
+void saturnAddA()
 {
 	//glClear(GL_COLOR_BUFFER_BIT|GL_DEPTH_BUFFER_BIT);
 	glClearColor(0.552, 0.6, 0.682, 0);
     //Display the text
     glColor3f(0,0,1);
-    glRasterPos3f(55,535,0);
+    glRasterPos3f(115,515,0);
     glutBitmapCharacter(GLUT_BITMAP_9_BY_15, 'a');
     glutPostRedisplay();
     glutSwapBuffers();
 }
 
-void addR()
+void saturnAddT()
 {
 	//glClear(GL_COLOR_BUFFER_BIT|GL_DEPTH_BUFFER_BIT);
 	glClearColor(0.552, 0.6, 0.682, 0);
     //Display the text
     glColor3f(0,0,1);
-    glRasterPos3f(75,535,0);
-    glutBitmapCharacter(GLUT_BITMAP_9_BY_15, 'r');
-    glutPostRedisplay();
-    glutSwapBuffers();
-}
-
-void addT()
-{
-	//glClear(GL_COLOR_BUFFER_BIT|GL_DEPTH_BUFFER_BIT);
-	glClearColor(0.552, 0.6, 0.682, 0);
-    //Display the text
-    glColor3f(0,0,1);
-    glRasterPos3f(95,535,0);
+    glRasterPos3f(135,515,0);
     glutBitmapCharacter(GLUT_BITMAP_9_BY_15, 't');
     glutPostRedisplay();
     glutSwapBuffers();
 }
 
-void addH()
+void saturnAddU()
 {
 	//glClear(GL_COLOR_BUFFER_BIT|GL_DEPTH_BUFFER_BIT);
 	glClearColor(0.552, 0.6, 0.682, 0);
     //Display the text
     glColor3f(0,0,1);
-    glRasterPos3f(115,535,0);
-    glutBitmapCharacter(GLUT_BITMAP_9_BY_15, 'h');
+    glRasterPos3f(155,515,0);
+    glutBitmapCharacter(GLUT_BITMAP_9_BY_15, 'u');
     glutPostRedisplay();
     glutSwapBuffers();
 }
 
+void saturnAddR()
+{
+	//glClear(GL_COLOR_BUFFER_BIT|GL_DEPTH_BUFFER_BIT);
+	glClearColor(0.552, 0.6, 0.682, 0);
+    //Display the text
+    glColor3f(0,0,1);
+    glRasterPos3f(175,515,0);
+    glutBitmapCharacter(GLUT_BITMAP_9_BY_15, 'r');
+    glutPostRedisplay();
+    glutSwapBuffers();
+}
+
+
+void saturnAddN()
+{
+	//glClear(GL_COLOR_BUFFER_BIT|GL_DEPTH_BUFFER_BIT);
+	glClearColor(0.552, 0.6, 0.682, 0);
+    //Display the text
+    glColor3f(0,0,1);
+    glRasterPos3f(195,515,0);
+    glutBitmapCharacter(GLUT_BITMAP_9_BY_15, 'n');
+    glutPostRedisplay();
+    glutSwapBuffers();
+}
 
 
