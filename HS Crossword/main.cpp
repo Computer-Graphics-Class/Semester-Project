@@ -31,25 +31,35 @@ void init()
 
 
 void home()
-{   
+{
     //glClear(GL_COLOR_BUFFER_BIT);     // Clear display window
 
-	glClearColor(0, 0, 0, 0);
-	glColor3f(1,0,0);
-	glRasterPos3f(300,350,0);
-	char msg1[] = "HS CROSSWORDS";
-	for(int i=0; i<strlen(msg1); i++)
-	{
-	glutBitmapCharacter(GLUT_BITMAP_TIMES_ROMAN_24, msg1[i]);
-	}
+    glClearColor(0, 0, 0, 0);
+    glColor3f(1, 0, 0);
+    glRasterPos3f(250, 350, 0);
+    char msg1[] = "WELCOME TO H.S CROSSWORD";
 
-	glColor3f(0,0,1);
-	glRasterPos3f(300,150,0);
-	char msg2[] = "Press X to start the game";
-	for(int i=0; i<strlen(msg2); i++)
-	{
-	glutBitmapCharacter(GLUT_BITMAP_9_BY_15, msg2[i]);
-	}
+    for (int i = 0; i < strlen(msg1); i++)
+    {
+        glutBitmapCharacter(GLUT_BITMAP_TIMES_ROMAN_24, msg1[i]);
+    }
+
+    glColor3f(1, 1, 1);
+    glRasterPos3f(300, 300, 0);
+    char inst[] = "Let's test your knowledge";
+
+    for (int i = 0; i < strlen(inst); i++)
+    {
+        glutBitmapCharacter(GLUT_BITMAP_9_BY_15, inst[i]);
+    }
+
+    glColor3f(1, 1, 1);
+    glRasterPos3f(230, 270, 0);
+    char msg2[] = "Press X to start the game, Press Z to exit";
+    for (int i = 0; i < strlen(msg2); i++)
+    {
+        glutBitmapCharacter(GLUT_BITMAP_9_BY_15, msg2[i]);
+    }
     // Process all OpenGL routine s as quickly as possible
     glFlush();
 }
