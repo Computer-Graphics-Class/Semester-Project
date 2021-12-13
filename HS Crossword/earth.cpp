@@ -7,6 +7,7 @@
 #include <iostream>
 #include <string.h>
 #include <fstream>
+#include "saturn.cpp"
 
 using namespace std;
 //Note: GLglut.h path depending on the system in use  
@@ -35,6 +36,10 @@ void earthkeys(unsigned char key, int x, int y)
     if(key == 'h')
     {
             glutDisplayFunc(addH);
+    }
+     if(key == 's')
+    {
+            glutDisplayFunc(saturn);
     }
     glutPostRedisplay();
 }
