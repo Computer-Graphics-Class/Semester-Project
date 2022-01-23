@@ -10,7 +10,7 @@
 #include "levelpass.cpp"
 
 using namespace std;
-//Note: GLglut.h path depending on the system in use  
+//Note: GL/glut.h path depending on the system in use  
 //Linux compile: 
 
 void experimentAddP();
