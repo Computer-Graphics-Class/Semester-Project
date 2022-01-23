@@ -114,10 +114,10 @@ void levelTwo()
 
     glColor3f(0,0,0);
     glRasterPos3f(410,360,0);
-    char question9[] = "10. THe highest point of something";  //summit
-    for(int n=0; n<strlen(question9); n++)
+    char question10[] = "10. THe highest point of something";  //summit
+    for(int n=0; n<strlen(question10); n++)
     {
-        glutBitmapCharacter(GLUT_BITMAP_9_BY_15, question9[n]);
+        glutBitmapCharacter(GLUT_BITMAP_9_BY_15, question10[n]);
     }
 
 
