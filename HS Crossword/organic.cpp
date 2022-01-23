@@ -9,7 +9,6 @@
 #include <fstream>
 #include "nucleus.cpp"
 
-
 using namespace std;
 //Note: GLglut.h path depending on the system in use  
 //Linux compile: 
