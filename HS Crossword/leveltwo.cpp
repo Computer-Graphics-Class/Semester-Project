@@ -1,4 +1,4 @@
-// for MS Windows
+//for MS Windows
 //#include<Windows.h>   
 #include <GL/glut.h>      
 #include <stdio.h>
