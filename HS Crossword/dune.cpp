@@ -7,6 +7,7 @@
 #include <iostream>
 #include <string.h>
 #include <fstream>
+#include "solar.cpp"
 
 
 using namespace std;
@@ -24,6 +25,10 @@ void dunekeys(unsigned char key, int x, int y)
     {
             glutDisplayFunc(duneAddE);
     }
+    if(key == 's')
+    {
+            glutDisplayFunc(solar);
+    }
   
     glutPostRedisplay();
 }
@@ -35,7 +40,7 @@ void dune()
   
     //Display the text
     glColor3f(0,0,1);
-    glRasterPos3f(95,515,0);
+    glRasterPos3f(195,475,0);
     glutBitmapCharacter(GLUT_BITMAP_9_BY_15, 'u');
     glutPostRedisplay();
     glutSwapBuffers();
@@ -48,7 +53,7 @@ void duneAddN()
 	glClearColor(0.552, 0.6, 0.682, 0);
     //Display the text
     glColor3f(0,0,1);
-    glRasterPos3f(115,515,0);
+    glRasterPos3f(195,455,0);
     glutBitmapCharacter(GLUT_BITMAP_9_BY_15, 'n');
     glutPostRedisplay();
     glutSwapBuffers();
@@ -60,7 +65,7 @@ void duneAddE()
 	glClearColor(0.552, 0.6, 0.682, 0);
     //Display the text
     glColor3f(0,0,1);
-    glRasterPos3f(155,515,0);
+    glRasterPos3f(195,435,0);
     glutBitmapCharacter(GLUT_BITMAP_9_BY_15, 'e');
     glutPostRedisplay();
     glutSwapBuffers();

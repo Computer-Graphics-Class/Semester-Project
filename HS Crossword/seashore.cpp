@@ -7,6 +7,7 @@
 #include <iostream>
 #include <string.h>
 #include <fstream>
+#include "arctic.cpp"
 
 
 using namespace std;
@@ -46,6 +47,10 @@ void seashorekeys(unsigned char key, int x, int y)
     {
             glutDisplayFunc(seashoreAddE);
     }
+    if(key == 'R')
+    {
+            glutDisplayFunc(arctic);
+    }
     
     glutPostRedisplay();
 }
@@ -57,7 +62,7 @@ void seashore()
   
     //Display the text
     glColor3f(0,0,1);
-    glRasterPos3f(95,515,0);
+    glRasterPos3f(115,475,0);
     glutBitmapCharacter(GLUT_BITMAP_9_BY_15, 'e');
     glutPostRedisplay();
     glutSwapBuffers();
@@ -70,7 +75,7 @@ void seashoreAddA()
 	glClearColor(0.552, 0.6, 0.682, 0);
     //Display the text
     glColor3f(0,0,1);
-    glRasterPos3f(115,515,0);
+    glRasterPos3f(115,455,0);
     glutBitmapCharacter(GLUT_BITMAP_9_BY_15, 'a');
     glutPostRedisplay();
     glutSwapBuffers();
@@ -82,7 +87,7 @@ void seashoreAddS()
 	glClearColor(0.552, 0.6, 0.682, 0);
     //Display the text
     glColor3f(0,0,1);
-    glRasterPos3f(135,515,0);
+    glRasterPos3f(115,435,0);
     glutBitmapCharacter(GLUT_BITMAP_9_BY_15, 's');
     glutPostRedisplay();
     glutSwapBuffers();
@@ -94,7 +99,7 @@ void seashoreAddH()
 	glClearColor(0.552, 0.6, 0.682, 0);
     //Display the text
     glColor3f(0,0,1);
-    glRasterPos3f(155,515,0);
+    glRasterPos3f(115,415,0);
     glutBitmapCharacter(GLUT_BITMAP_9_BY_15, 'h');
     glutPostRedisplay();
     glutSwapBuffers();
@@ -106,7 +111,7 @@ void seashoreAddO()
 	glClearColor(0.552, 0.6, 0.682, 0);
     //Display the text
     glColor3f(0,0,1);
-    glRasterPos3f(175,515,0);
+    glRasterPos3f(115,395,0);
     glutBitmapCharacter(GLUT_BITMAP_9_BY_15, 'o');
     glutPostRedisplay();
     glutSwapBuffers();
@@ -118,7 +123,7 @@ void seashoreAddR()
 	glClearColor(0.552, 0.6, 0.682, 0);
     //Display the text
     glColor3f(0,0,1);
-    glRasterPos3f(195,515,0);
+    glRasterPos3f(115,375,0);
     glutBitmapCharacter(GLUT_BITMAP_9_BY_15, 'r');
     glutPostRedisplay();
     glutSwapBuffers();
@@ -130,7 +135,7 @@ void seashoreAddE()
 	glClearColor(0.552, 0.6, 0.682, 0);
     //Display the text
     glColor3f(0,0,1);
-    glRasterPos3f(195,515,0);
+    glRasterPos3f(115,355,0);
     glutBitmapCharacter(GLUT_BITMAP_9_BY_15, 'e');
     glutPostRedisplay();
     glutSwapBuffers();

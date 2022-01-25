@@ -7,6 +7,7 @@
 #include <iostream>
 #include <string.h>
 #include <fstream>
+#include "dune.cpp"
 
 
 using namespace std;
@@ -31,9 +32,13 @@ void arctickeys(unsigned char key, int x, int y)
     {
             glutDisplayFunc(arcticAddI);
     }
-    if(key == 'c')
+    if(key == 'C')
     {
          glutDisplayFunc(arcticAddc);
+    }
+    if(key == 'u')
+    {
+         glutDisplayFunc(dune);
     }
     
     glutPostRedisplay();
@@ -46,7 +51,7 @@ void arctic()
   
     //Display the text
     glColor3f(0,0,1);
-    glRasterPos3f(95,515,0);
+    glRasterPos3f(155,475,0);
     glutBitmapCharacter(GLUT_BITMAP_9_BY_15, 'r');
     glutPostRedisplay();
     glutSwapBuffers();
@@ -59,7 +64,7 @@ void arcticAddC()
 	glClearColor(0.552, 0.6, 0.682, 0);
     //Display the text
     glColor3f(0,0,1);
-    glRasterPos3f(115,515,0);
+    glRasterPos3f(155,455,0);
     glutBitmapCharacter(GLUT_BITMAP_9_BY_15, 'c');
     glutPostRedisplay();
     glutSwapBuffers();
@@ -71,7 +76,7 @@ void arcticAddT()
 	glClearColor(0.552, 0.6, 0.682, 0);
     //Display the text
     glColor3f(0,0,1);
-    glRasterPos3f(135,515,0);
+    glRasterPos3f(155,435,0);
     glutBitmapCharacter(GLUT_BITMAP_9_BY_15, 't');
     glutPostRedisplay();
     glutSwapBuffers();
@@ -83,7 +88,7 @@ void arcticAddI()
 	glClearColor(0.552, 0.6, 0.682, 0);
     //Display the text
     glColor3f(0,0,1);
-    glRasterPos3f(155,515,0);
+    glRasterPos3f(155,415,0);
     glutBitmapCharacter(GLUT_BITMAP_9_BY_15, 'i');
     glutPostRedisplay();
     glutSwapBuffers();
@@ -95,7 +100,7 @@ void arcticAddc()
 	glClearColor(0.552, 0.6, 0.682, 0);
     //Display the text
     glColor3f(0,0,1);
-    glRasterPos3f(175,515,0);
+    glRasterPos3f(155,395,0);
     glutBitmapCharacter(GLUT_BITMAP_9_BY_15, 'c');
     glutPostRedisplay();
     glutSwapBuffers();

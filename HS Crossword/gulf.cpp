@@ -7,6 +7,7 @@
 #include <iostream>
 #include <string.h>
 #include <fstream>
+#include  "cliff.cpp"
 
 
 using namespace std;
@@ -24,7 +25,10 @@ void gulfkeys(unsigned char key, int x, int y)
     {
             glutDisplayFunc(gulfAddF);
     }
-  
+    if(key == 'L')
+    {
+            glutDisplayFunc(cliff);
+    }
     glutPostRedisplay();
 }
 
@@ -35,7 +39,7 @@ void gulf()
   
     //Display the text
     glColor3f(0,0,1);
-    glRasterPos3f(95,515,0);
+    glRasterPos3f(35,515,0);
     glutBitmapCharacter(GLUT_BITMAP_9_BY_15, 'u');
     glutPostRedisplay();
     glutSwapBuffers();
@@ -48,7 +52,7 @@ void gulfAddL()
 	glClearColor(0.552, 0.6, 0.682, 0);
     //Display the text
     glColor3f(0,0,1);
-    glRasterPos3f(115,515,0);
+    glRasterPos3f(35,495,0);
     glutBitmapCharacter(GLUT_BITMAP_9_BY_15, 'l');
     glutPostRedisplay();
     glutSwapBuffers();
@@ -60,7 +64,7 @@ void gulfAddF()
 	glClearColor(0.552, 0.6, 0.682, 0);
     //Display the text
     glColor3f(0,0,1);
-    glRasterPos3f(155,515,0);
+    glRasterPos3f(35,475,0);
     glutBitmapCharacter(GLUT_BITMAP_9_BY_15, 'f');
     glutPostRedisplay();
     glutSwapBuffers();

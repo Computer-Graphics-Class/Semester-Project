@@ -7,6 +7,7 @@
 #include <iostream>
 #include <string.h>
 #include <fstream>
+#include "deforestation.cpp"
 
 
 using namespace std;
@@ -30,6 +31,10 @@ void solarkeys(unsigned char key, int x, int y)
     {
             glutDisplayFunc(solarAddA);
     }
+    if(key == 'd')
+    {
+            glutDisplayFunc(deforestation);
+    }
     
     glutPostRedisplay();
 }
@@ -41,7 +46,7 @@ void solar()
   
     //Display the text
     glColor3f(0,0,1);
-    glRasterPos3f(95,515,0);
+    glRasterPos3f(35,375,0);
     glutBitmapCharacter(GLUT_BITMAP_9_BY_15, 's');
     glutPostRedisplay();
     glutSwapBuffers();
@@ -54,7 +59,7 @@ void solarAddO()
 	glClearColor(0.552, 0.6, 0.682, 0);
     //Display the text
     glColor3f(0,0,1);
-    glRasterPos3f(115,515,0);
+    glRasterPos3f(55,375,0);
     glutBitmapCharacter(GLUT_BITMAP_9_BY_15, 'o');
     glutPostRedisplay();
     glutSwapBuffers();
@@ -66,7 +71,7 @@ void solarAddL()
 	glClearColor(0.552, 0.6, 0.682, 0);
     //Display the text
     glColor3f(0,0,1);
-    glRasterPos3f(135,515,0);
+    glRasterPos3f(75,375,0);
     glutBitmapCharacter(GLUT_BITMAP_9_BY_15, 'l');
     glutPostRedisplay();
     glutSwapBuffers();
@@ -78,7 +83,7 @@ void solarAddA()
 	glClearColor(0.552, 0.6, 0.682, 0);
     //Display the text
     glColor3f(0,0,1);
-    glRasterPos3f(155,515,0);
+    glRasterPos3f(95,375,0);
     glutBitmapCharacter(GLUT_BITMAP_9_BY_15, 'a');
     glutPostRedisplay();
     glutSwapBuffers();

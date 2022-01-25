@@ -7,6 +7,7 @@
 #include <iostream>
 #include <string.h>
 #include <fstream>
+#include "../gameover.cpp"
 
 
 using namespace std;
@@ -25,15 +26,16 @@ void summitkeys(unsigned char key, int x, int y)
     }
     if(key == 'M')
     {
-            glutDisplayFunc(summitAddm);
+        glutDisplayFunc(summitAddm);
     }
     if(key == 'i')
     {
-            glutDisplayFunc(summitAddI);
+        glutDisplayFunc(summitAddI);
     }
     if(key == 't')
     {
-         glutDisplayFunc(summitAddT);
+        //glutDisplayFunc(summitAddT);
+        glutDisplayFunc(gameOver);
     }
     
     glutPostRedisplay();
@@ -46,7 +48,7 @@ void summit()
   
     //Display the text
     glColor3f(0,0,1);
-    glRasterPos3f(95,515,0);
+    glRasterPos3f(215,335,0);
     glutBitmapCharacter(GLUT_BITMAP_9_BY_15, 'u');
     glutPostRedisplay();
     glutSwapBuffers();
@@ -59,7 +61,7 @@ void summitAddM()
 	glClearColor(0.552, 0.6, 0.682, 0);
     //Display the text
     glColor3f(0,0,1);
-    glRasterPos3f(115,515,0);
+    glRasterPos3f(215,315,0);
     glutBitmapCharacter(GLUT_BITMAP_9_BY_15, 'm');
     glutPostRedisplay();
     glutSwapBuffers();
@@ -71,7 +73,7 @@ void summitAddm()
 	glClearColor(0.552, 0.6, 0.682, 0);
     //Display the text
     glColor3f(0,0,1);
-    glRasterPos3f(135,515,0);
+    glRasterPos3f(215,295,0);
     glutBitmapCharacter(GLUT_BITMAP_9_BY_15, 'm');
     glutPostRedisplay();
     glutSwapBuffers();
@@ -83,7 +85,7 @@ void summitAddI()
 	glClearColor(0.552, 0.6, 0.682, 0);
     //Display the text
     glColor3f(0,0,1);
-    glRasterPos3f(155,515,0);
+    glRasterPos3f(215,275,0);
     glutBitmapCharacter(GLUT_BITMAP_9_BY_15, 'i');
     glutPostRedisplay();
     glutSwapBuffers();
@@ -95,7 +97,7 @@ void summitAddT()
 	glClearColor(0.552, 0.6, 0.682, 0);
     //Display the text
     glColor3f(0,0,1);
-    glRasterPos3f(175,515,0);
+    glRasterPos3f(215,255,0);
     glutBitmapCharacter(GLUT_BITMAP_9_BY_15, 't');
     glutPostRedisplay();
     glutSwapBuffers();

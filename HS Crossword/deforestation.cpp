@@ -7,13 +7,12 @@
 #include <iostream>
 #include <string.h>
 #include <fstream>
-
+#include "summit.cpp"
 
 using namespace std;
 //Note: GLglut.h path depending on the system in use  
 //Linux compile: 
 
-void deforestationAddE();
 void deforestationAddF();
 void deforestationAddO();
 void deforestationAddR();
@@ -21,16 +20,12 @@ void deforestationAddE();
 void deforestationAddS();
 void deforestationAddT();
 void deforestationAddA();
-void deforestationAddT();
+void deforestationAddt();
 void deforestationAddI();
-void deforestationAddO();
+void deforestationAddo();
 void deforestationAddN();
 void deforestationkeys(unsigned char key, int x, int y)
 {
-    if(key == 'e')
-    {
-        glutDisplayFunc(deforestationAddE);
-    }
     if(key == 'f')
     {
             glutDisplayFunc(deforestationAddF);
@@ -59,21 +54,25 @@ void deforestationkeys(unsigned char key, int x, int y)
     {
             glutDisplayFunc(deforestationAddA);
     }
-    if(key == 't')
+    if(key == 'T')
     {
-            glutDisplayFunc(deforestationAddT);
+            glutDisplayFunc(deforestationAddt);
     }
     if(key == 'i')
     {
             glutDisplayFunc(deforestationAddI);
     }
-    if(key == 'o')
+    if(key == 'O')
     {
-            glutDisplayFunc(deforestationAddO);
+            glutDisplayFunc(deforestationAddo);
     }
     if(key == 'n')
     {
             glutDisplayFunc(deforestationAddN);
+    }
+    if(key == 'u')
+    {
+            glutDisplayFunc(summit);
     }
     glutPostRedisplay();
 }
@@ -85,23 +84,11 @@ void deforestation()
   
     //Display the text
     glColor3f(0,0,1);
-    glRasterPos3f(95,515,0);
+    glRasterPos3f(95,355,0);
     glutBitmapCharacter(GLUT_BITMAP_9_BY_15, 'd');
     glutPostRedisplay();
     glutSwapBuffers();
     glutKeyboardFunc(deforestationkeys);
-}
-
-void deforestationAddE()
-{
-	//glClear(GL_COLOR_BUFFER_BIT|GL_DEPTH_BUFFER_BIT);
-	glClearColor(0.552, 0.6, 0.682, 0);
-    //Display the text
-    glColor3f(0,0,1);
-    glRasterPos3f(115,515,0);
-    glutBitmapCharacter(GLUT_BITMAP_9_BY_15, 'e');
-    glutPostRedisplay();
-    glutSwapBuffers();
 }
 
 void deforestationAddF()
@@ -110,7 +97,7 @@ void deforestationAddF()
 	glClearColor(0.552, 0.6, 0.682, 0);
     //Display the text
     glColor3f(0,0,1);
-    glRasterPos3f(135,515,0);
+    glRasterPos3f(135,355,0);
     glutBitmapCharacter(GLUT_BITMAP_9_BY_15, 'f');
     glutPostRedisplay();
     glutSwapBuffers();
@@ -122,7 +109,7 @@ void deforestationAddO()
 	glClearColor(0.552, 0.6, 0.682, 0);
     //Display the text
     glColor3f(0,0,1);
-    glRasterPos3f(155,515,0);
+    glRasterPos3f(155,355,0);
     glutBitmapCharacter(GLUT_BITMAP_9_BY_15, 'o');
     glutPostRedisplay();
     glutSwapBuffers();
@@ -134,7 +121,7 @@ void deforestationAddR()
 	glClearColor(0.552, 0.6, 0.682, 0);
     //Display the text
     glColor3f(0,0,1);
-    glRasterPos3f(175,515,0);
+    glRasterPos3f(175,355,0);
     glutBitmapCharacter(GLUT_BITMAP_9_BY_15, 'r');
     glutPostRedisplay();
     glutSwapBuffers();
@@ -147,7 +134,7 @@ void deforestationAddE()
 	glClearColor(0.552, 0.6, 0.682, 0);
     //Display the text
     glColor3f(0,0,1);
-    glRasterPos3f(195,515,0);
+    glRasterPos3f(195,355,0);
     glutBitmapCharacter(GLUT_BITMAP_9_BY_15, 'e');
     glutPostRedisplay();
     glutSwapBuffers();
@@ -160,7 +147,7 @@ void deforestationAddS()
 	glClearColor(0.552, 0.6, 0.682, 0);
     //Display the text
     glColor3f(0,0,1);
-    glRasterPos3f(195,515,0);
+    glRasterPos3f(215,355,0);
     glutBitmapCharacter(GLUT_BITMAP_9_BY_15, 's');
     glutPostRedisplay();
     glutSwapBuffers();
@@ -172,7 +159,7 @@ void deforestationAddT()
 	glClearColor(0.552, 0.6, 0.682, 0);
     //Display the text
     glColor3f(0,0,1);
-    glRasterPos3f(195,515,0);
+    glRasterPos3f(235,355,0);
     glutBitmapCharacter(GLUT_BITMAP_9_BY_15, 't');
     glutPostRedisplay();
     glutSwapBuffers();
@@ -184,19 +171,19 @@ void deforestationAddA()
 	glClearColor(0.552, 0.6, 0.682, 0);
     //Display the text
     glColor3f(0,0,1);
-    glRasterPos3f(195,515,0);
+    glRasterPos3f(255,355,0);
     glutBitmapCharacter(GLUT_BITMAP_9_BY_15, 'a');
     glutPostRedisplay();
     glutSwapBuffers();
 }
 
-void deforestationAddT()
+void deforestationAddt()
 {
 	//glClear(GL_COLOR_BUFFER_BIT|GL_DEPTH_BUFFER_BIT);
 	glClearColor(0.552, 0.6, 0.682, 0);
     //Display the text
     glColor3f(0,0,1);
-    glRasterPos3f(195,515,0);
+    glRasterPos3f(275,355,0);
     glutBitmapCharacter(GLUT_BITMAP_9_BY_15, 't');
     glutPostRedisplay();
     glutSwapBuffers();
@@ -208,19 +195,19 @@ void deforestationAddI()
 	glClearColor(0.552, 0.6, 0.682, 0);
     //Display the text
     glColor3f(0,0,1);
-    glRasterPos3f(195,515,0);
+    glRasterPos3f(295,355,0);
     glutBitmapCharacter(GLUT_BITMAP_9_BY_15, 'i');
     glutPostRedisplay();
     glutSwapBuffers();
 }
 
-void deforestationAddO()
+void deforestationAddo()
 {
 	//glClear(GL_COLOR_BUFFER_BIT|GL_DEPTH_BUFFER_BIT);
 	glClearColor(0.552, 0.6, 0.682, 0);
     //Display the text
     glColor3f(0,0,1);
-    glRasterPos3f(195,515,0);
+    glRasterPos3f(315,355,0);
     glutBitmapCharacter(GLUT_BITMAP_9_BY_15, 'o');
     glutPostRedisplay();
     glutSwapBuffers();
@@ -232,7 +219,7 @@ void deforestationAddN()
 	glClearColor(0.552, 0.6, 0.682, 0);
     //Display the text
     glColor3f(0,0,1);
-    glRasterPos3f(195,515,0);
+    glRasterPos3f(335,355,0);
     glutBitmapCharacter(GLUT_BITMAP_9_BY_15, 'n');
     glutPostRedisplay();
     glutSwapBuffers();
