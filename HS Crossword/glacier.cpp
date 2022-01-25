@@ -7,6 +7,7 @@
 #include <iostream>
 #include <string.h>
 #include <fstream>
+#include "gulf.cpp"
 
 
 using namespace std;
@@ -41,9 +42,13 @@ void glacierkeys(unsigned char key, int x, int y)
     {
             glutDisplayFunc(glacierAddE);
     }
-     if(key == 'r')
+    if(key == 'r')
     {
             glutDisplayFunc(glacierAddR);
+    }
+    if(key == 'u')
+    {
+            glutDisplayFunc(gulf);
     }
     glutPostRedisplay();
 }
@@ -55,7 +60,7 @@ void glacier()
   
     //Display the text
     glColor3f(0,0,1);
-    glRasterPos3f(95,515,0);
+    glRasterPos3f(35,535,0);
     glutBitmapCharacter(GLUT_BITMAP_9_BY_15, 'g');
     glutPostRedisplay();
     glutSwapBuffers();
@@ -68,7 +73,7 @@ void glacierAddL()
 	glClearColor(0.552, 0.6, 0.682, 0);
     //Display the text
     glColor3f(0,0,1);
-    glRasterPos3f(115,515,0);
+    glRasterPos3f(55,535,0);
     glutBitmapCharacter(GLUT_BITMAP_9_BY_15, 'l');
     glutPostRedisplay();
     glutSwapBuffers();
@@ -80,7 +85,7 @@ void glacierAddA()
 	glClearColor(0.552, 0.6, 0.682, 0);
     //Display the text
     glColor3f(0,0,1);
-    glRasterPos3f(135,515,0);
+    glRasterPos3f(75,535,0);
     glutBitmapCharacter(GLUT_BITMAP_9_BY_15, 'a');
     glutPostRedisplay();
     glutSwapBuffers();
@@ -92,7 +97,7 @@ void glacierAddC()
 	glClearColor(0.552, 0.6, 0.682, 0);
     //Display the text
     glColor3f(0,0,1);
-    glRasterPos3f(155,515,0);
+    glRasterPos3f(95,535,0);
     glutBitmapCharacter(GLUT_BITMAP_9_BY_15, 'c');
     glutPostRedisplay();
     glutSwapBuffers();
@@ -104,7 +109,7 @@ void glacierAddI()
 	glClearColor(0.552, 0.6, 0.682, 0);
     //Display the text
     glColor3f(0,0,1);
-    glRasterPos3f(175,515,0);
+    glRasterPos3f(115,535,0);
     glutBitmapCharacter(GLUT_BITMAP_9_BY_15, 'i');
     glutPostRedisplay();
     glutSwapBuffers();
@@ -117,7 +122,7 @@ void glacierAddE()
 	glClearColor(0.552, 0.6, 0.682, 0);
     //Display the text
     glColor3f(0,0,1);
-    glRasterPos3f(195,515,0);
+    glRasterPos3f(135,535,0);
     glutBitmapCharacter(GLUT_BITMAP_9_BY_15, 'e');
     glutPostRedisplay();
     glutSwapBuffers();
@@ -130,7 +135,7 @@ void glacierAddR()
 	glClearColor(0.552, 0.6, 0.682, 0);
     //Display the text
     glColor3f(0,0,1);
-    glRasterPos3f(195,515,0);
+    glRasterPos3f(155,535,0);
     glutBitmapCharacter(GLUT_BITMAP_9_BY_15, 'r');
     glutPostRedisplay();
     glutSwapBuffers();
