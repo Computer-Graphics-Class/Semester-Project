@@ -7,6 +7,7 @@
 #include <iostream>
 #include <string.h>
 #include <fstream>
+#include "reflux.cpp"
 
 
 using namespace std;
@@ -39,6 +40,10 @@ void saturnkeys(unsigned char key, int x, int y)
     if(key == 'n')
     {
             glutDisplayFunc(saturnAddN);
+    }
+    if(key == 'e')
+    {
+            glutDisplayFunc(reflux);
     }
     glutPostRedisplay();
 }
